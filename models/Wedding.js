@@ -40,4 +40,4 @@ Wedding.init(
     }
 );
 
-module.exports = User;
+module.exports = Wedding;
