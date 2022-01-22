@@ -12,6 +12,7 @@ Wedding.belongsTo(User, {
     foreignKey: 'owner',
 });
 
+
 Event.belongsTo(Wedding, {
     foreignKey: 'wedding_id'
 });
