@@ -1,6 +1,6 @@
-const { User } = require("../../../../../module-work/module-14/models");
+const { User } = require("../../models/User");
 
-router.post('/', (req, res) => {
+router.post('/user', (req, res) => {
     User.create({
         username: req.body.username,
         email: req.body.email,
@@ -16,3 +16,5 @@ router.post('/', (req, res) => {
     
     
   });
+
+  module.exports = router;
