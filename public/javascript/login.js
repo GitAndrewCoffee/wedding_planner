@@ -5,6 +5,7 @@ function signupFormHandler(event) {
     const password = document.querySelector('#password-signup').value.trim();
 
     if (username && email && password) {
+        console.log('registration submitted');
         fetch('/api/users', {
         method: 'post',
         body: JSON.stringify({

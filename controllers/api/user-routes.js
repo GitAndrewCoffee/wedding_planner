@@ -1,7 +1,8 @@
 const { User } = require("../../models/User");
 const router = require('express').Router();
 
-router.post('/user', (req, res) => {
+router.post('/', (req, res) => {
+    console.log("Post /user running");
     User.create({
         username: req.body.username,
         email: req.body.email,
