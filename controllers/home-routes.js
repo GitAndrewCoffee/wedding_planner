@@ -11,4 +11,8 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/events', (req, res) => {
+  res.render('events');
+});
+
 module.exports = router;

@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
   });
 
   router.get("/", (req, res) => {
-    console.log('user get route called')  
+    console.log('event get route called')  
     res.json('Testing');
   });
 

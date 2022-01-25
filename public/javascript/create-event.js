@@ -18,7 +18,7 @@ async function eventFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/event-calendar');
+    document.location.replace('/events');
   } else {
     alert(response.statusText);
   }
