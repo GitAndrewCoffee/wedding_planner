@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 router.post('/', (req, res) => {
     console.log("Post /user running");
-    console.log (req.body);
+    console.log (req.body.username);
     User.create({
         username: req.body.username,
         email: req.body.email,
