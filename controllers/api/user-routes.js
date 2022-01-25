@@ -1,8 +1,9 @@
-const { User } = require("../../models/User");
+const User = require("../../models/User");
 const router = require('express').Router();
 
 router.post('/', (req, res) => {
     console.log("Post /user running");
+    console.log (req.body);
     User.create({
         username: req.body.username,
         email: req.body.email,
@@ -17,6 +18,11 @@ router.post('/', (req, res) => {
         })
     
     
+  });
+
+  router.get("/", (req, res) => {
+    console.log('user get route called')  
+    res.json('Testing');
   });
 
   module.exports = router;
