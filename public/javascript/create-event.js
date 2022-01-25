@@ -1,15 +1,13 @@
 async function eventFormHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="event-title"]').value;
-  const wedding_id = 2
+  const title = document.querySelector('#event-title').value.trim();
   //const eventNotes = document.querySelector('input[name="event-notes"]').value;
 
   const response = await fetch(`/api/events`, {
-    method: 'POST',
+    method: 'post',
     body: JSON.stringify({
       title,
-      wedding_id
       //eventNotes
     }),
     headers: {

@@ -1,12 +1,14 @@
 const Event = require("../../models/Event");
 const router = require('express').Router();
+const sequelize = require('../../config/connection');
+const withAuth = require('../../utils/auth');
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     console.log("POST /event running");
     console.log (req.body);
     Event.create({
         title: req.body.title,
-        wedding_id: req.body.wedding_id,
+        user_id: req.session.user_id
     })
         .then(dbEventData => res.json(dbEventData))
         .catch(err => {
