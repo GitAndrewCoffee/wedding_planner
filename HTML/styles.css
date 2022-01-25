@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  width: 100%;
+  background-color: rgb(241, 241, 241);
+}
+
+.navigation {
+  display: flex;
+  padding-left: 20px;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(236, 236, 236);
+}
+
+.navigation-brand {
+  width: auto;
+  height: 100%;
+  background-color: azure;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
