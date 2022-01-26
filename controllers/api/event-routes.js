@@ -8,7 +8,9 @@ router.post('/', withAuth, (req, res) => {
     console.log (req.body);
     Event.create({
         title: req.body.title,
-        user_id: req.session.user_id
+        user_id: req.session.user_id,
+        start_time: req.body.start_time,
+        end_time: req.body.end_time
     })
         .then(dbEventData => res.json(dbEventData))
         .catch(err => {
