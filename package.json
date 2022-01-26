@@ -6,8 +6,9 @@
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.14.0"
+    "sequelize": "^6.14.1"
   },
   "scripts": {
     "start": "node server.js"
@@ -16,7 +17,6 @@
   "description": "U of MN Coding Bootcamp - Project 2 Team 2 - Fall 2021",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GitAndrewCoffee/wedding_planner.git"
