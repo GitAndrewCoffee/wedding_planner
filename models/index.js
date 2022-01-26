@@ -26,4 +26,4 @@ Event_item.belongsTo(Event, {
 })
 
 
-module.exports = { User, Post, Vote, Comment };
+module.exports = { User, Wedding, Event, Event_item };
