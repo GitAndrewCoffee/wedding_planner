@@ -1,5 +1,13 @@
 body {
   background-color: rgb(241, 241, 241);
+
+}
+
+.bg-image {
+  background: url('../assets/images/background-image.jpeg') no-repeat center center fixed;
+    /* height: 100vh;
+    max-width: 100%; */
+    background-size: cover;
 }
 
 .navigation-bar {
