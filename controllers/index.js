@@ -1,9 +1,11 @@
 const router = require('express').Router();
 const homeRoutes = require('./home-routes.js');
-const apiRoutes = require('./api');
+const myCalendarRoutes = require('./my-calendar-routes.js')
+const apiRoutes = require('./api/');
 
-router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
+router.use('/events', myCalendarRoutes)
+router.use('/api', apiRoutes);
 
 router.use((req, res) => {
     res.status(404).end();

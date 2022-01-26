@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
-const bcrypt = require('bcrypt');
-
+const User = require('./User');
 
 // create our User model
 class Wedding extends Model {}
@@ -26,7 +25,7 @@ Wedding.init(
         allowNull: false,
         unique: true,
         references: {
-            model: 'user',
+            model: 'User',
             key: 'id'
             }
         }
@@ -36,8 +35,8 @@ Wedding.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'wedding'
     }
 );
 
-module.exports = User;
+module.exports = Wedding;

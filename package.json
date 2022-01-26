@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.14.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "wedding_planner",
+  "description": "U of MN Coding Bootcamp - Project 2 Team 2 - Fall 2021",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitAndrewCoffee/wedding_planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GitAndrewCoffee/wedding_planner/issues"
+  },
+  "homepage": "https://github.com/GitAndrewCoffee/wedding_planner#readme"
+}
