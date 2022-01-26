@@ -25,10 +25,10 @@ Event.init(
             type: DataTypes.TIME,
             allowNull: true,
         },
-        wedding_id: {
+        user_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'wedding',
+            model: 'user',
             key: 'id'
             }
         }
