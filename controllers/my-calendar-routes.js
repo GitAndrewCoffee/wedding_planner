@@ -12,8 +12,7 @@ const withAuth = require('../utils/auth');
         },
         order: [
             [
-                'start_time',
-                'DESC'
+                'start_time'
             ]
         ],
         attributes: [
