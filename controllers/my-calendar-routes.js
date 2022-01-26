@@ -10,6 +10,12 @@ const withAuth = require('../utils/auth');
         where: {
             user_id: req.session.user_id
         },
+        order: [
+            [
+                'start_time',
+                'DESC'
+            ]
+        ],
         attributes: [
             'title',
             'start_time',
