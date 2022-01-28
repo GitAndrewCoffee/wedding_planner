@@ -12,6 +12,11 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/eventnotes', (req, res) => {
+  console.log("The event notes page has been called with a get");
+  res.render('/event_notes');
+});
+
 
 
 module.exports = router;

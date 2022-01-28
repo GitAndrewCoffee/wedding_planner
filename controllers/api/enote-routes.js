@@ -1,4 +1,5 @@
-const Event = require("../../models/Event_item");
+const EventItem = require("../../models/Event_item");
+const Event = require("../../models/Event");
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
@@ -21,22 +22,40 @@ router.post('/', withAuth, (req, res) => {
   });
 
   // get all of a user's events for the My Calendar page
-  router.get("/", withAuth, (req, res) => {
+  router.get("/:id", withAuth, (req, res) => {
     console.log('event notes get route called');
-    Event.findAll({
+    Event.findOne({
         where: {
-            event_id: req.session.event_id
+            id: req.params.id
         },
         attributes: [
             'title',
-            'notes'            
+            'start_time',
+            'end_time'
         ] 
     })
         .then(dbEventData => {
+            //make the returned data useful
             const events = dbEventData.map(event => event.get({ plain: true }));
-
-            res.render('events_notes', {
-                events
+            
+            //pull child items
+            EventItem.findAll({
+              where: {
+                event_id: req.params.id
+              },
+              order: [
+                ['id', 'DESC']
+              ],
+              attributes: [
+                'title',
+                'notes'
+              ]
+            })
+              .then(function (eventitems, events){
+                  const viewData = [eventitems, events];
+                  res.render('events_notes', {
+                    viewData      
+              });            
             });
         })
         .catch(err => {
