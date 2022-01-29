@@ -1,17 +1,15 @@
-<form class="new-event-form">
-  <div>
-    <label for="event-title">New Event Title:</label>
-    <input type="text" id="event-title" />
-  </div>
-  {{!-- <div>
-    <label for="">password:</label>
-    <input type="password" id="password-login" />
-  </div> --}}
-  <div>
-    <button type="submit">Submit New Event</button>
-  </div>
-</form>
-<ol class="event-list">
+<h2>Event Notes!!</h2>
 
+<ol class="event-list">
+  {{#each events as |event|}}
+  <li>
+    {{> event-info event }}
+    {{#each event_item as |event_item|}}
+    <li>
+      {{> event-info event }}
+    </li>
+    {{/each}}
+  </li>
+  {{/each}}
 </ol>
 <script src="/javascript/event_notes.js"></script>
