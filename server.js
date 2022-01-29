@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const morgan = require('morgan');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -20,6 +21,14 @@ const sess = {
 };
 
 app.use(session(sess));
+
+app.use(morgan('tiny'));
+
+app.listen(8080, () => {
+
+  console.log('Server listening on port :8080');
+
+});
 
 const helpers = require('./utils/helpers');
 
