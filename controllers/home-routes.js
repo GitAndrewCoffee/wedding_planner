@@ -29,7 +29,8 @@ router.get('/eventnotes/:id', (req, res) => {
       attributes: [
           'title',
           'start_time',
-          'end_time'          
+          'end_time',
+          'id'          
       ],
       include: [{
         model: Event_item,

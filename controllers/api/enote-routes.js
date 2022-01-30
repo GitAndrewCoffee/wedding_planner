@@ -7,10 +7,10 @@ const Event_item = require("../../models/Event_item");
 router.post('/', withAuth, (req, res) => {
     console.log("POST /eventnotes running");
     console.log (req.body);
-    Event.create({
+    Event_item.create({
         title: req.body.title,
-        notes: req.session.notes,
-        event_id: req.session.event_id,
+        notes: req.body.notes,
+        event_id: req.body.event_id,
     })
         .then(dbData => res.json(dbData))
         .catch(err => {
@@ -22,7 +22,7 @@ router.post('/', withAuth, (req, res) => {
   });  
 
   router.delete('/:id', withAuth, (req, res) => {
-    Comment.destroy({
+    Event_item.destroy({
       where: {
         id: req.params.id
       }
