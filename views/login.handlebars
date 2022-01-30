@@ -1,31 +1,37 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+<div class="container row">
+  <form class="login-form form">
+    <div class="mb-3">
+      <div class="mb-3">Already have an account? Log in here.</div>
+      <label for="email-login" class="form-label">Email:</label>
+      <input type="text" id="email-login" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label for="password-login" class="form-label">Password:</label>
+      <input type="password" id="password-login" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary">Log In</button>
+    </div>
+  </form>
+</div>
+<div class="container row">
+  <form class="signup-form form">
+    <div class="mb-3">
+      <div class="mb-3">First time user? Sign up here!</div>
+      <label for="username-signup" class="form-label">Username:</label>
+      <input type="text" id="username-signup" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label for="email-signup" class="form-label">Email:</label>
+      <input type="text" id="email-signup" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label for="password-signup" class="form-label">Password:</label>
+      <input type="password" id="password-signup" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </div>
+  </form>
+</div>
 <script src="/javascript/login.js"></script>

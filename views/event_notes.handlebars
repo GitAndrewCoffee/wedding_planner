@@ -1,0 +1,27 @@
+<h2>{{viewData.title}}</h2>
+<p id="eventID" class="invisible">{{viewData.id}}</p>
+
+{{> event-info viewData }}
+
+<ol class="event-list">
+  {{#each viewData.event_items as |eItem|}}
+   <li>
+     {{> event-item eItem }}
+  </li>
+    {{/each}}
+</ol>
+<form class="new-eItem-form">
+  <div>
+    <label for="eTitle" class="form-label mb-3">New Note Title:</label>
+    <input type="text" id="eTitle" class="form-control mb-3" />
+  </div>
+    <div>
+    <label for="eNotes" class="form-label mb-3">New Note Text:</label>
+    <input type="text" id="eNotes" class="form-control mb-3" />
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary mb-3">Submit New Note</button>
+  </div>  
+</form>
+
+<script src="/javascript/event_notes.js"></script>

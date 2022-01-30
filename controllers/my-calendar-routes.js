@@ -18,7 +18,8 @@ const withAuth = require('../utils/auth');
         attributes: [
             'title',
             'start_time',
-            'end_time'
+            'end_time',
+            'id'
         ] 
     })
         .then(dbEventData => {
