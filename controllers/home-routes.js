@@ -27,12 +27,20 @@ router.get('/eventnotes/:id', (req, res) => {
       },
       as: 'event',
       attributes: [
-          'title'          
-      ]
+          'title',
+          'start_time',
+          'end_time'          
+      ],
+      include: [{
+        model: Event_item,
+        attributes: ["title", "notes"]        
+      }]
   })
       .then(dbData => {
           // console.log("!! << Data Pulled >> !!");
-           
+          
+          console.log(dbData);
+          
           const viewData = dbData.get({ plain: true });
 
           res.render('event_notes',{

@@ -1,13 +1,23 @@
-<h2>It's {{viewData.title}}</h2>
-{{log viewData}}
+<h2>{{viewData.title}}</h2>
+
+{{> event-info viewData }}
+
+<form class="new-eItem-form">
+  <div>
+    <label for="eTitle">New Event Title:</label>
+    <input type="text" id="eTitle" />
+  </div>
+  <div>
+    <button type="submit">Submit New Event</button>
+  </div>
+</form>
+
 
 <ol class="event-list">
-  
-  
-    <li>
- 
-
-    
+  {{#each viewData.event_items as |eItem|}}
+   <li>
+     {{> event-item eItem }}
   </li>
-  
+    {{/each}}
 </ol>
+<script src="/javascript/create_notes.js"></script>
