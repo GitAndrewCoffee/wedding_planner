@@ -4,14 +4,22 @@
     <input type="text" id="event-title" />
   </div>
   <div>
+    <label for="start-time">Start Time:</label>
+    <input type="time" id="start-time"/>
+  </div>
+  <div>
+    <label for="end-time">End Time:</label>
+    <input type="time" id="end-time"/>
+  </div>
+  <div>
     <button type="submit">Submit New Event</button>
   </div>
 </form>
-<ol class="event-list">
+<ul class="event-list">
   {{#each events as |event|}}
   <li>
     {{> event-info event }}
   </li>
   {{/each}}
-</ol>
+</ul>
 <script src="/javascript/create-event.js"></script>
