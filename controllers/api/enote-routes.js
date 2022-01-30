@@ -22,35 +22,35 @@ router.post('/', withAuth, (req, res) => {
   });
 
   // get all of an event's event items for the event items page
-  router.get("/:id", (req, res) => {
-    console.log('event get route called');
-    Event.findOne({
-        where: {
-            id: req.params.id
-        },
-        attributes: [
-            'title',
-            'start_time',
-            'end_time'
-        ],
-        include: {
-          model: Event_item,
-          where: {event_id: req.params.id}
-        }
-    })
-        .then(dbEventItemData => {
-            const viewData = dbEventItemData.map(event => event.get({ plain: true }));
+  // router.get("/:id", (req, res) => {
+  //   console.log('event get route called');
+  //   Event.findOne({
+  //       where: {
+  //           id: req.params.id
+  //       },
+  //       attributes: [
+  //           'title',
+  //           'start_time',
+  //           'end_time'
+  //       ],
+  //       include: {
+  //         model: Event_item,
+  //         where: {event_id: req.params.id}
+  //       }
+  //   })
+  //       .then(dbEventItemData => {
+  //           const viewData = dbEventItemData.map(event => event.get({ plain: true }));
 
-            res.render('event_notes', {
-              viewData
-            });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
+  //           res.render('event_notes', {
+  //             viewData
+  //           });
+  //       })
+  //       .catch(err => {
+  //           console.log(err);
+  //           res.status(500).json(err);
         
-        });
-  });
+  //       });
+  // });
 
   router.delete('/:id', withAuth, (req, res) => {
     Comment.destroy({

@@ -14,27 +14,30 @@ router.get('/login', (req, res) => {
 
 router.get('/eventnotes/:id', (req, res) => {
   console.log("The event notes page has been called with a get");
-  // res.render('event_notes')
+
+  // res.render('event_notes',{
+  //   viewData: {
+  //     event: {title: "Help me, I'm broken Inside"}
+  //   }
+  // })
+
   Event.findOne({
       where: {
           id: req.params.id
       },
+      as: 'event',
       attributes: [
-          'title'
-      ],
-      include: {
-        model: Event_item,
-        as: 'event_item',
-        attributes: ['title', 'notes'],
-        where: {event_id: req.params.id}
-      }
+          'title'          
+      ]
   })
-      .then(dbEventItemData => {
-          // const viewData = dbEventItemData.map(event => event.get({ plain: true }));
+      .then(dbData => {
+          // console.log("!! << Data Pulled >> !!");
+           
+          const viewData = dbData.get({ plain: true });
 
-          res.render('event_notes', {
-            dbEventItemData
-          });
+          res.render('event_notes',{
+            viewData
+        });
       })
       .catch(err => {
           console.log(err);
