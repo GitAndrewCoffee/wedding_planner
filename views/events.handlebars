@@ -1,23 +1,23 @@
 <form class="new-event-form">
   <div>
-    <label for="event-title">New Event Title:</label>
-    <input type="text" id="event-title" />
+    <label for="event-title" class="form-label">New Event Title:</label>
+    <input type="text" id="event-title" class="form-control" />
   </div>
   <div>
-    <label for="start-time">Start Time:</label>
-    <input type="time" id="start-time"/>
+    <label for="start-time" class="form-label">Start Time:</label>
+    <input type="time" id="start-time" class="form-control" />
   </div>
-  <div>
-    <label for="end-time">End Time:</label>
-    <input type="time" id="end-time"/>
+  <div class="mb-3">
+    <label for="end-time" class="form-label">End Time:</label>
+    <input type="time" id="end-time" class="form-control" />
   </div>
-  <div>
-    <button type="submit">Submit New Event</button>
+  <div class="mb-5">
+    <button type="submit" class="btn btn-primary">Submit New Event</button>
   </div>
 </form>
-<ul class="event-list">
+<ul class="event-list list-group">
   {{#each events as |event|}}
-  <li>
+  <li class="list-group-item">
     {{> event-info event }}
   </li>
   {{/each}}
