@@ -15,6 +15,10 @@ a:hover, a:active {
   color: blue;
 }
 
+.navbar {
+  padding: 0 0 10px 0;
+}
+
 .bg-image {
   background: url('../assets/images/background-image.jpeg') no-repeat center center fixed;
     /* height: 100vh;
