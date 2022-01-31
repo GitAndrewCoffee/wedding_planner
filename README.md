@@ -2,13 +2,16 @@
 
 # My Wedding App
 
+
 This is an app that allows you to plan a schedule for your big day!  This app schedules out a day's event by start and end times and allows the user to create a series of labeled notes for each event. 
+
 
 ## Features
 
 - login / create account page
 - Time sorted event calendar with the ability to add custom events
 - A list of notes for each event, to help keep the user organized
+
 
 ## How To Use
 
@@ -28,6 +31,7 @@ For each event the user can click on the item in the list.  This will take them 
 
 ![calendar page](/eventnotes.jpg)
 
+
 ## Authors
 
 [GitAndrewCoffee](https://github.com/GitAndrewCoffee/)
@@ -35,6 +39,7 @@ For each event the user can click on the item in the list.  This will take them 
 [mwegter95](https://github.com/mwegter95)
 
 [raymondspartz](https://www.github.com/raymondspartz)
+
 
 ## Technology used
 
@@ -60,3 +65,4 @@ Documentation Site: https://www.npmjs.com/package/morgan
 Morgan is a middleware that logs HTTP requests and errors.  It adds the calls automatically into your server app's console log and offers a direct logg access port as well.
 
 This tool was implemented to make our console logs more consistant and easier to implement.
+
