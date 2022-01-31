@@ -2,7 +2,7 @@
 
 # My Wedding App
 
-This is an app that allows you to plan, managage, and organize the big day!  This app schedules out a day's event by start and end times and allows the user to create a series of labeled notes for each event. 
+This is an app that allows you to plan a schedule for your big day!  This app schedules out a day's event by start and end times and allows the user to create a series of labeled notes for each event. 
 
 ## Features
 
@@ -41,7 +41,7 @@ For each event the user can click on the item in the list.  This will take them 
 - Javascript
 - HTML
 - CSS
-- MYSQL
+- MySQL
 - Node.js
 - Express
 - bcrypt
