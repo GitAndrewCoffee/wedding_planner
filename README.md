@@ -2,23 +2,35 @@
 
 # My Wedding App
 
-This is an app that allows you to plan, managage, and organize the big day!
+
+This is an app that allows you to plan a schedule for your big day!  This app schedules out a day's event by start and end times and allows the user to create a series of labeled notes for each event. 
+
 
 ## Features
 
 - login / create account page
-- add events to the calendar
-- make groups for notes
+- Time sorted event calendar with the ability to add custom events
+- A list of notes for each event, to help keep the user organized
+
 
 ## How To Use
 
 The app is deployed on Heroku:
 https://my-wedding-appz.herokuapp.com/
 
-- Create an account on the homepage
-- Click "Calendar" and add an event
+First time users create an account on the opening page.  Existing users log in with their email and password.
 
-Your event will be saved there everytime you log in.
+![login page](/login.jpg)
+
+Once logged in the user can add new events (deletion and modification in a future version)  
+Time stamps are optional
+
+![calendar page](/calendar.jpg)
+
+For each event the user can click on the item in the list.  This will take them to a detailed notes page for that event.
+
+![calendar page](/eventnotes.jpg)
+
 
 ## Authors
 
@@ -28,6 +40,29 @@ Your event will be saved there everytime you log in.
 
 [raymondspartz](https://www.github.com/raymondspartz)
 
-## Screenshots
 
-![login](https://user-images.githubusercontent.com/76711623/151211858-c181519d-402c-418f-9c2d-648e0eb3940d.png)
+## Technology used
+
+- Javascript
+- HTML
+- CSS
+- MySQL
+- Node.js
+- Express
+- bcrypt
+- Sequelize
+- Dotenv
+- Handlebars    
+- Express Session
+- Morgan
+
+## New Technology Used
+
+NPM Package - Morgan
+
+Documentation Site: https://www.npmjs.com/package/morgan
+
+Morgan is a middleware that logs HTTP requests and errors.  It adds the calls automatically into your server app's console log and offers a direct logg access port as well.
+
+This tool was implemented to make our console logs more consistant and easier to implement.
+
